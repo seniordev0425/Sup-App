@@ -13,15 +13,7 @@ class LogInScreen extends React.Component {
 
     }
     
-    
     componentDidMount () {
-
-        // Animated.timing(this.state.yPosition, {
-        //     toValue: 200,
-        //     easing: Easing.ease,
-        //     duration: 300,
-        // }).start();
-
 
         Animated.sequence([
             // decay, then spring to start and twirl
