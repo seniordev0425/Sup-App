@@ -2,24 +2,23 @@ import * as React from 'react';
 
 
 import { Button, View, Text, Image, ImageBackground, StyleSheet, Dimensions } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import images from '../../themes/images';
 
-
+var id = 0;
 class SplashScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { id: 0 }
   }
 
   componentDidMount(){
     // Toggle the state every second
+    id = 0;
     let myInterval = setInterval(() => {
-      if (this.state.id >= 8) {
+      if (id >= 8) {
         clearInterval(myInterval);
         this.props.navigation.navigate('login')
       } else {
-        this.setState({id: this.state.id+1});
+        id ++;
       }
     }, 270)
   }
@@ -28,7 +27,7 @@ class SplashScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Image style={styles.splashImage} source={require('../assets/imgs/splash.gif')} />    
+        <Image style={styles.splashImage} source={images.splashBackground} />    
       </View>
     );
   }
