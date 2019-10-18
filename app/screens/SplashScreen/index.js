@@ -5,22 +5,17 @@ import { Button, View, Text, Image, ImageBackground, StyleSheet, Dimensions } fr
 import images from '../../themes/images';
 
 var id = 0;
+
+const {width, height} = Dimensions.get('window');
 class SplashScreen extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount(){
-    // Toggle the state every second
-    id = 0;
-    let myInterval = setInterval(() => {
-      if (id >= 8) {
-        clearInterval(myInterval);
-        this.props.navigation.navigate('login')
-      } else {
-        id ++;
-      }
-    }, 270)
+    setTimeout(() => {
+      this.props.navigation.navigate('login');
+    }, 2500);
   }
 
   render() {
@@ -35,13 +30,16 @@ class SplashScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-      width: '100%',
-      height: Dimensions.get('window').height,
+      width: width,
+      height: height,
+      backgroundColor: 'white'
   },
   
   splashImage: {
-      width: '100%',
-      height: '100%',
+      width: width,
+      height: height-30,
+      marginTop: 10,
+      resizeMode: 'stretch'
   }
 });
 

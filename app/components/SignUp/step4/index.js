@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text, Image, ImageBackground, Animated, Easing, Dimensions, TextInput, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { Button, View, Text, Image, ImageBackground, Animated, Easing, Dimensions, TextInput, TouchableOpacity } from 'react-native';
 import { connect } from "react-redux";
 
 import images from '../../../themes/images';
@@ -7,7 +7,7 @@ import styles from './styles';
 
 const { width, height } = Dimensions.get('window');
 
-class Step1 extends React.Component {
+class Step4 extends React.Component {
     constructor(props) {
         super(props);
         
@@ -15,26 +15,24 @@ class Step1 extends React.Component {
     }
 
     onClickNextBtn = () => {
-        let {dispatch} = this.props;
-        dispatch({ type: "updateSignUpStep", data: 2 });
+        let dispatch = this.props.dispatch;
+        dispatch({ type: "updateSignUpStep", data: 5 });
     }
 
     render(){
         return (
             <View style={{alignItems:'center', height: height*460/800}}>
-
-                <View style={styles.sign_up_email}>
-                    <Text style={styles.sign_up_email_text}>EmaiL</Text>
-                    <TextInput style={styles.sign_up_email_val} />
+                <View style={styles.sign_up_hobby}>
+                    <Text style={styles.sign_up_hobby_text}>WHaT are Your HoBBies</Text>
+                    <TextInput placeholder={'Pick aT LeasT one'} style={styles.sign_up_hobby_val} />
                 </View>
 
-                <View>
-                    <Text style={styles.sign_up_or_text}>OR</Text>
+                <View style={styles.sign_up_looking_work}>
+                    <Text style={styles.sign_up_looking_work_text}>Are You Looking For work</Text>
+                    <TextInput placeholder={'Yes or no'} style={styles.sign_up_looking_work_val} />
                 </View>
-                <View style={{flexDirection:'row'}}>
-                    <Image style={styles.facebook_icon_img} source={images.facebook_icon}/>
-                    <Image style={styles.google_icon_img} source={images.google_icon}/>
-                </View>
+
+                
                 <View style={{position:'absolute', bottom:50}}>
                     <TouchableOpacity onPress={this.onClickNextBtn}>
                         <Image style={styles.next_btn_img} source={images.next_btn}/>
@@ -45,10 +43,11 @@ class Step1 extends React.Component {
         );
     };
 }
+
 function mapStateToProps(state) {
     return {
       sign_up_step: state.userInfo.sign_up_step,
     };
 }
 
-export default connect(mapStateToProps)(Step1);
+export default connect(mapStateToProps)(Step4);

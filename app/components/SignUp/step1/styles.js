@@ -1,41 +1,48 @@
 import { Dimensions } from 'react-native';
+import index from '../../../constants/index';
+
 const { width, height } = Dimensions.get('window');
 
 export default{
     sign_up_email: {
-        width: 250,
+        width: index.text_input_width,
 
     },
     sign_up_email_text: {
         fontFamily: 'Omiwa',
-        fontSize: 18,
+        fontSize: index.font_size,
         color: '#444444'
     },
     sign_up_email_val: {
         width: '100%',
-        height: 40, 
+        height: index.text_input_height, 
         borderWidth: 2,
-        borderColor: '#777777'
+        borderColor: '#777777',
+        padding: 2,
+        paddingLeft: 10,
+        fontSize: index.font_size,
     },
     sign_up_or_text: {
         marginTop: 5,
-        fontSize: 18,
+        fontSize: index.font_size,
         fontFamily: 'Omiwa',
         color: '#444444'
     },
     google_icon_img: {
-        width: 70,
-        height: 70,
-        marginLeft: 30
+        width: width * 70/450,
+        height: width * 70/450,
+        marginLeft: 50,
+        resizeMode:'stretch'
     },
     facebook_icon_img: {
-        width: 70,
-        height: 70,
+        width: width * 70/450,
+        height: width * 70/450,
+        resizeMode:'stretch'
 
     },
     next_btn_img: {
-        width: 110,
-        height: 70,
-        marginTop: 100
+        width: width * 110/450,
+        height: height * 70/800,
+        resizeMode:'stretch'
     }
 }

@@ -20,16 +20,16 @@ export default{
     },
     logo_ssup_img: {
         width: width * 340/450,
-        height: height * 250/800,
+        height: height * 220/800,
         resizeMode: 'stretch',
     },
     blank_container: {
-        height: height * 150/800,
+        height: height * 120/800,
         // backgroundColor: 'blue'
     },
     sign_up_btn_container: {
         width: width,
-        marginTop:height * 30/800,
+        marginTop:height * 50/800,
         alignItems: 'center'
     },
     sign_up_btn: {
@@ -38,7 +38,7 @@ export default{
     },
     sign_in_btn_container: {
         alignItems: 'center',
-        marginTop: height * 200/800,
+        marginTop: height * 250/800,
     },
     sign_in_confirm: {
         fontSize: 18,
