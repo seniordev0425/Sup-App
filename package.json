@@ -36,7 +36,9 @@
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.9.0"
   },
+
   "jest": {
     "preset": "react-native"
   }
+  
 }
