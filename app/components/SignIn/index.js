@@ -9,8 +9,6 @@ const { width, height } = Dimensions.get('window');
 class SignIn extends React.Component {
     constructor(props) {
         super(props);
-        
-
     }
     
 
