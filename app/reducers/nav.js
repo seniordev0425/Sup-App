@@ -1,3 +1,4 @@
+//navigation reducer
 import { AppNavigator } from '../navigators/AppNavigator';
 
 const firstAction = AppNavigator.router.getActionForPathAndParams('splash');
@@ -15,5 +16,7 @@ function nav(state = initialNavState, action){
 
     return nextState || state;
 }
+
+
 
 export default nav;
