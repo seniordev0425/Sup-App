@@ -31,6 +31,8 @@ class Step6 extends React.Component {
                     <Text style={styles.sign_up_end_email_sent}>We sent you an email.</Text>
                     <Text style={styles.sign_up_end_verify}>verify</Text>
                 </View>
+				
+				
                 
 
                 <View style={{position:'absolute', bottom:50}}>
