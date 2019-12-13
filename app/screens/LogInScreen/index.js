@@ -63,6 +63,7 @@ class LogInScreen extends React.Component {
 
         Animated.sequence([
             // decay, then spring to start and twirl
+			
             Animated.timing(this.state.yPosition, {
                 toValue: height * 200/800,
                 easing: Easing.ease,
