@@ -27,6 +27,8 @@ class Step6 extends React.Component {
                     <Text style={styles.sign_up_end_first_name_text}>First name</Text>
                 </View>
 
+
+
                 <View style={styles.sign_up_end}>
                     <Text style={styles.sign_up_end_email_sent}>We sent you an email.</Text>
                     <Text style={styles.sign_up_end_verify}>verify</Text>
