@@ -26,4 +26,5 @@ function UserInfo(state = initialFeedState, action){
     }
 }
 
+
 export default UserInfo;
