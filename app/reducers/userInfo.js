@@ -21,6 +21,7 @@ function UserInfo(state = initialFeedState, action){
                 ...state,
                 is_logo_gif: action.data
             };
+			
         default:
             return state;
     }
