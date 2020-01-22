@@ -39,7 +39,9 @@ class AppWithNavigationState extends React.Component {
         //     dispatch({ type: 'Navigation/BACK' });
         //     return true;
         // }.bind(this));
-    }
+    
+	
+	
 
     componentWillUnmount() {
         // BackHandler.removeEventListener('hardwareBackPress');
