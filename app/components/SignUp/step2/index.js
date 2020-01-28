@@ -13,6 +13,7 @@ class Step2 extends React.Component {
         
 
     }
+	
 
     onClickNextBtn = () => {
         let dispatch = this.props.dispatch;
