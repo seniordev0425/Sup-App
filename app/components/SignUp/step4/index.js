@@ -14,6 +14,7 @@ class Step4 extends React.Component {
 
     }
 
+
     onClickNextBtn = () => {
         let dispatch = this.props.dispatch;
         dispatch({ type: "updateSignUpStep", data: 5 });
